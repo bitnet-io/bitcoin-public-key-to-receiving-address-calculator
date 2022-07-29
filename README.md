@@ -3,7 +3,7 @@
 ## What is this?
 A 'calculator' to generate a legacy, compatibility, or segwit receiving address from a compressed bitcoin public key. You can also generate a new random compressed WIF private key (along with the derived compressed public key and legacy receiving address).
 
-You can access the site here: ENTER URL
+You can access the site here: https://mission-bitcoin.github.io/bitcoin-public-key-to-receiving-address-calculator/
 
 ## Why does this exist?
 Good question. 
