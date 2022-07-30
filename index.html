@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/bundle.js" type="module"></script>
+    <title>Bitcoin Public Key to Receiving Address Calculator</title>
+  </head>
+
+  <body>
+    <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
+      <center><h1>Bitcoin Public Key to Receiving Address Calculator</h1></center>
+    </div>
+    
+    <br />
+    <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
+             
+        <div>
+          <p>Need to convert a bitcoin compressed public key into a receiving address? Probably not. But this page will be here if you ever do.</p>
+
+          <p>This page was mainly built for education purposes. However, one example of when you might need this is if you're ever required to demonstrate ownership of a receiving address without sharing your seed phrase, private key (extended or individual), extended public key, or by signing a message.</p>
+
+          <p>You cannot enter a private key into this site on purpose (as it's a security risk). If you're concerned about entering your public key on this page, then you can download the site from Github and run it offline.</p>
+
+          <p>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or submit an issue/pull request on <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.</p>
+        </div>
+    </div>
+  
+  <br />  
+  <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
+    <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
+    <div>
+      <div>
+        <br>
+        <font color="orange"><b>Enter public key to generate receiving address</b> (format: compressed pubkey, 66 hex digits):</font> <br><br><input style="width: 620px; height: 28px" type="text" id="publicKey" placeholder="Example: 0331683a75a76ad3e21ab188803271107ef9740938421081908cc8642706f78916" title="Public Key Input">
+        <br><br>
+        <form>
+          <font color="orange"><b>Select address type:</b></font>
+          <br><br>
+          <select style="height:28px" id="addressType">
+            <option value="segwit">Segwit (P2WPKH, starts with 'bc1q')</option>
+            <option value="compatibility">Compatibility (P2SH(P2WPKH), starts with '3')</option>  
+            <option value="legacy">Legacy (P2PKH, starts with '1')</option>
+          </select>
+        </form>
+        <br>
+        <font color="orange"><b>Receiving address:</b></font> <br><input style="width: 440px; height: 28px; background-color: rgb(236, 195, 141)" type="text" id="receivingAddress" title="Receiving Address Output">
+       <br><br><br>
+       <center><button style="width:80px; height:35px" id="button">Submit</button></center>
+       <br>
+      </div>
+      </div>
+      </div>
+    <div>
+  </div>
+
+  <br />
+  <hr style="border-top: 2px dashed Black">
+  <br />
+  <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
+  <p><b>Don't have a public key to test with?</b> Then generate a random private key, along with the derived public key and a receiving address.</p>
+  <p>Do not use the generated keys or addresses for actually receiving/sending bitcoin!</p>
+  <br>
+  <center><button style="width:200px; height:35px" id="buttonKeyPair">Generate Random Keypair</button></center>
+  <br><br>
+  <font color="orange"><b>Public key </b>(format: compressed):</font> <br><input style="width: 520px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomPublicKey" title="Random Public Key">
+  <br><br>
+  <font color="orange"><b>Private key </b>(format: WIF compressed):</font> <br><input style="width: 480px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomPrivateKey" title="Random Private Key">
+  <br><br>
+  <font color="orange"><b>Receiving address </b>(format: legacy, derivation path: m/44'/0'/0'/0/0):</font> <br><input style="width: 440px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomReceivingAddress" title="Random Private Key">
+  <br><br>
+  </div>
+  
+</body>
+</html>
