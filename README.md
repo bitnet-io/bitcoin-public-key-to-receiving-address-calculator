@@ -24,6 +24,7 @@ If you're unsure how to find the public key for one of your receiving addresses,
 
 - @bitcoinjs : https://github.com/bitcoinjs/bitcoinjs-lib (bitcoinjs-lib) - MIT Licence
 - @bitcore : https://github.com/bitpay/bitcore/ (bitcore-lib) - MIT Licence
+- @browserify : https://github.com/browserify/browserify (browserify) - MIT Licence
 
 **Licence:**
 
