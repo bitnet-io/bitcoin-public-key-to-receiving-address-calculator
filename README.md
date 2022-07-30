@@ -13,10 +13,10 @@ I developed this mainly for my own learning, but thought it may be handy if anyo
 While it's relatively trivial (cryptographically speaking) to calculate a receiving address from a public key, I haven't found a website that makes it easy to do. Most sites with similar features start by having you generate (or enter) your seed words or private key first (ie, rather than starting with the public key).
 
 If you're unsure how to find the public key for one of your receiving addresses, then you should use a comprehensive wallet software or wallet generation tool, for example:
-- <a href="https://sparrowwallet.com/">Sparrow Wallet</a>
-- <a href="https://samouraiwallet.com/">Samourai Wallet</a>
-- <a href="https://iancoleman.io/bip39/">Ian Coleman's BIP39 Mnemonic Code Converter</a>
-- <a href="https://bitcoiner.guide/seed/">Bitcoin QnA's Seed Tool</a>
+- <a href="https://sparrowwallet.com/" target="blank">Sparrow Wallet</a>
+- <a href="https://samouraiwallet.com/" target="blank">Samourai Wallet</a>
+- <a href="https://iancoleman.io/bip39/" target="blank">Ian Coleman's BIP39 Mnemonic Code Converter</a>
+- <a href="https://bitcoiner.guide/seed/" target="blank">Bitcoin QnA's Seed Tool</a>
 
 ------------------------------------------------------------------------------------------------------------------
 
