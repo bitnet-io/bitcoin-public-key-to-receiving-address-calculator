@@ -18,13 +18,12 @@
     <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
              
         <div>
-          <p>Need to convert a bitcoin compressed public key into a receiving address? Probably not. But this page will be here if you ever do.</p>
-
-          <p>This page was mainly built for education purposes. However, one example of when you might need this is if you're ever required to demonstrate ownership of a receiving address without sharing your seed phrase, private key (extended or individual), extended public key, or by signing a message.</p>
-
-          <p>You cannot enter a private key into this site on purpose (as it's a security risk). If you're concerned about entering your public key on this page, then you can download the site from Github and run it offline.</p>
-
-          <p>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or submit an issue/pull request on <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.</p>
+          <p>Need to convert a bitcoin compressed public key into a receiving address? Probably not. But this page will be here if you ever do.
+          <br><br>This is a calculator to generate a legacy, compatibility, or segwit receiving address from a compressed bitcoin child public key. One use for this is to demonstrate 'likely' ownership during an audit in which you would rather not provide your private keys, extended public key, nor a message signed by the private key. 
+          <br><br>This tool is not intended to generate multiple addresses from private keys nor parent public keys. You'll mostly find this useful if you already have a receiving address and the associated public key, or if you have a public key and want to verify it can derive a specific receiving address.
+          <br><br>If you want to just test the calculator out, then you can also generate a random compressed WIF private key along with the derived public key and legacy receiving address. Only use these to test the calculator - do not use them to store your bitcoin!
+          <br><br>This site was purposely designed without the option to input a private key or extended public key (as it's a security risk). If you're concerned about entering a child public key on this page, then you can download the site from Github and run it offline.
+          <br><br>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or submit an issue/pull request on <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.</p>
         </div>
     </div>
   
@@ -61,7 +60,7 @@
   <br />
   <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
   <p><b>Don't have a public key to test with?</b> Then generate a random private key, along with the derived public key and a receiving address.</p>
-  <p>Do not use the generated keys or addresses for actually receiving/sending bitcoin!</p>
+  <p>Do not use the generated keys or addresses for actually storing bitcoin!</p>
   <br>
   <center><button style="width:200px; height:35px" id="buttonKeyPair">Generate Random Keypair</button></center>
   <br><br>
