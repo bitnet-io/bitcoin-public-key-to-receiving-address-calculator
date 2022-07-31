@@ -3,16 +3,20 @@
 You can access the site here: https://mission-bitcoin.github.io/bitcoin-public-key-to-receiving-address-calculator/
 
 ## What is this?
-A calculator to generate a legacy, compatibility, or segwit receiving address from a compressed bitcoin child public key. One use for this is to demonstrate 'likely' ownership during an audit in which you would rather not provide your private keys, extended public key, nor a message signed by the private key.
+A calculator to generate a legacy, compatibility, or segwit receiving address from a compressed bitcoin child public key. One use for this is to demonstrate 'likely' ownership during an audit in which you would rather not provide your private key, extended public key, nor a message signed by the private key. 
 
-This tool is not intended to generate multiple addresses from private keys nor parent public keys (including xpubs). You'll mostly find this useful if you already have a receiving address and the associated public key, or if you have a public key and want to verify it can derive a specific receiving address. 
+This tool is not intended to generate multiple addresses (eg, from mnemonic seed words, a parent private key, or an extended public key). You'll mostly find this calculator useful if you already have a receiving address and the associated child public key, or if you have a child public key and want to determine which standard receiving addresses it derives.
 
-If you want to just test the calculator out, then you can also generate a random compressed WIF private key along with the derived public key and legacy receiving address. Only use these to test the calculator - do not use them to store your bitcoin!
+If you just want to test the calculator out, then you can also generate a random compressed WIF private key along with the derived public key and legacy receiving address. Only use these to test the calculator - do not use them to store your bitcoin!
+
+This site was purposely designed without the option to input seed words, a private key, or an extended public key (ie, because it's a security risk). If you're concerned about entering a child public key on this page, then you can download the site from Github and run it offline.
+
+If you're unsure of the distinction between parent and child keys, compressed and uncompressed keys, etc, then **Mastering Bitcoin** <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04.asciidoc" target="blank">Chapter 4</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc" target="blank">Chapter 5</a> have got you covered!</a></p>
 
 ## Why does this exist?
 Good question. 
 
-I developed this mainly for my own learning. Also, while it's relatively trivial to calculate a receiving address from a public key, I haven't found a website that makes it easy to do. Most wallet/address calculator sites start by having you generate (or enter) your seed words or private keys first (ie, rather than starting with a child public key).
+I developed this mainly for my own learning. Also, while it's relatively trivial to calculate a receiving address from a public key, I haven't found a website that makes it easy to do. Most wallet/address calculator sites start by having you generate (or enter) your seed words or private key first (ie, rather than starting with a child public key).
 
 If you're unsure how to find the public key for one of your receiving addresses, then you can use a comprehensive wallet software or wallet generation tool, for example:
 - <a href="https://sparrowwallet.com/" target="blank">Sparrow Wallet</a>
