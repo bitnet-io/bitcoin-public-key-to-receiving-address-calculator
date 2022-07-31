@@ -11,8 +11,6 @@ If you just want to test the calculator out, then you can also generate a random
 
 This site was purposely designed without the option to input seed words, a private key, or an extended public key (ie, because it's a security risk). If you're concerned about entering a child public key on this page, then you can download the site from Github and run it offline.
 
-If you're unsure of the distinction between parent and child keys, compressed and uncompressed keys, etc, then **Mastering Bitcoin** <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04.asciidoc" target="blank">Chapter 4</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc" target="blank">Chapter 5</a> have got you covered!</a></p>
-
 ## Why does this exist?
 Good question. 
 
