@@ -17,13 +17,14 @@
     <br />
     <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
              
-        <div>
-          <p>This is a calculator to generate a legacy, compatibility, or segwit receiving address from a compressed bitcoin child public key. One use for this is to demonstrate 'likely' ownership during an audit in which you would rather not provide your private keys, extended public key, nor a message signed by the private key. 
-          <br><br>This tool is not intended to generate multiple addresses from private keys nor parent public keys. You'll mostly find this useful if you already have a receiving address and the associated public key, or if you have a public key and want to verify it can derive a specific receiving address.
-          <br><br>If you want to just test the calculator out, then you can also generate a random compressed WIF private key along with the derived public key and legacy receiving address. Only use these to test the calculator - do not use them to store your bitcoin!
-          <br><br>This site was purposely designed without the option to input a private key or extended public key (as it's a security risk). If you're concerned about entering a child public key on this page, then you can download the site from Github and run it offline.
-          <br><br>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or submit an issue/pull request on <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.</p>
-        </div>
+      <div>
+        <p>This is a calculator to generate a legacy, compatibility, or segwit receiving address from a compressed bitcoin child public key. One use for this is to demonstrate 'likely' ownership during an audit in which you would rather not provide your private key, extended public key, nor a message signed by the private key. 
+        <br><br>This tool is not intended to generate multiple addresses (eg, from mnemonic seed words, a parent private key, or an extended public key). You'll mostly find this calculator useful if you already have a receiving address and the associated child public key, or if you have a child public key and want to determine which standard receiving addresses it derives.
+        <br><br>If you just want to test the calculator out, then you can also generate a random compressed WIF private key along with the derived public key and legacy receiving address. Only use these to test the calculator - do not use them to store your bitcoin!
+        <br><br>This site was purposely designed without the option to input seed words, a private key, or an extended public key (ie, because it's a security risk). If you're concerned about entering a child public key on this page, then you can download the site from Github and run it offline.
+        <br><br>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.
+        <br><br>If you're unsure of the distinction between parent and child keys, compressed and uncompressed keys, etc, then <b>Mastering Bitcoin</b> <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04.asciidoc" target="blank">Chapter 4</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc" target="blank">Chapter 5</a> have got you covered!</a></p>
+      </div>
     </div>
   
   <br />  
@@ -32,19 +33,19 @@
     <div>
       <div>
         <br>
-        <font color="orange"><b>Enter public key to generate receiving address</b> (format: compressed pubkey, 66 hex digits):</font> <br><br><input style="width: 620px; height: 28px" type="text" id="publicKey" placeholder="Example: 0331683a75a76ad3e21ab188803271107ef9740938421081908cc8642706f78916" title="Public Key Input">
+        <font color="orange"><b>Enter public key</b> (format: compressed, 66 hex digits):</font> <br><input style="width: 580px; height: 28px" type="text" id="publicKey" placeholder="Example: 0331683a75a76ad3e21ab188803271107ef9740938421081908cc8642706f78916" title="Public Key Input">
         <br><br>
         <form>
           <font color="orange"><b>Select address type:</b></font>
           <br><br>
-          <select style="height:28px" id="addressType">
+          <select style="height:30px" id="addressType">
             <option value="segwit">Segwit (P2WPKH, starts with 'bc1q')</option>
             <option value="compatibility">Compatibility (P2SH(P2WPKH), starts with '3')</option>  
             <option value="legacy">Legacy (P2PKH, starts with '1')</option>
           </select>
         </form>
         <br>
-        <font color="orange"><b>Receiving address:</b></font> <br><input style="width: 440px; height: 28px; background-color: rgb(236, 195, 141)" type="text" id="receivingAddress" title="Receiving Address Output">
+        <font color="orange"><b>Receiving address:</b></font> <br><input style="width: 340px; height: 28px; background-color: rgb(236, 195, 141)" type="text" id="receivingAddress" title="Receiving Address Output">
        <br><br><br>
        <center><button style="width:80px; height:35px" id="button">Submit</button></center>
        <br>
@@ -59,15 +60,15 @@
   <br />
   <div style="padding: 10px; border: 2px solid rgb(230, 108, 25)">
   <p><b>Don't have a public key to test with?</b> Then generate a random private key, along with the derived public key and a receiving address.</p>
-  <p>Do not use the generated keys or addresses for actually storing bitcoin!</p>
+  <p>Only use these to test the calculator - do not use them to store your bitcoin!</p>
   <br>
   <center><button style="width:200px; height:35px" id="buttonKeyPair">Generate Random Keypair</button></center>
   <br><br>
-  <font color="orange"><b>Public key </b>(format: compressed):</font> <br><input style="width: 520px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomPublicKey" title="Random Public Key">
+  <font color="orange"><b>Public key </b>(format: compressed):</font> <br><input style="width: 510px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomPublicKey" title="Random Public Key">
   <br><br>
-  <font color="orange"><b>Private key </b>(format: WIF compressed):</font> <br><input style="width: 480px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomPrivateKey" title="Random Private Key">
+  <font color="orange"><b>Private key </b>(format: WIF compressed):</font> <br><input style="width: 460px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomPrivateKey" title="Random Private Key">
   <br><br>
-  <font color="orange"><b>Receiving address </b>(format: legacy, derivation path: m/44'/0'/0'/0/0):</font> <br><input style="width: 440px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomReceivingAddress" title="Random Private Key">
+  <font color="orange"><b>Receiving address </b>(format: legacy):</font> <br><input style="width: 340px; height: 28px; background-color: rgb(201, 201, 201)" type="text" id="randomReceivingAddress" title="Random Private Key">
   <br><br>
   </div>
   
