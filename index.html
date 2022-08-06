@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/bundle.js" type="module"></script>
+    <!-- <script src="js/bundle.js" type="module"></script> -->
+    <script src="js/main.js" type="module"></script>
     <title>Bitcoin Public Key to Receiving Address Calculator</title>
   </head>
 
@@ -22,8 +23,8 @@
         <br><br>This tool is not intended to generate multiple addresses (eg, from mnemonic seed words, a parent private key, or an extended public key). You'll mostly find this calculator useful if you already have a receiving address and the associated child public key, or if you have a child public key and want to determine which standard receiving addresses it derives.
         <br><br>If you just want to test the calculator out, then you can also generate a random compressed WIF private key along with the derived public key and legacy receiving address. Only use these to test the calculator - do not use them to store your bitcoin!
         <br><br>This site was purposely designed without the option to input seed words, a private key, or an extended public key (ie, because it's a security risk). If you're concerned about entering a child public key on this page, then you can download the site from Github and run it offline.
-        <br><br>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.
-        <br><br>If you're unsure of the distinction between parent and child keys, compressed and uncompressed keys, etc, then <b>Mastering Bitcoin</b> <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04.asciidoc" target="blank">Chapter 4</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc" target="blank">Chapter 5</a> have got you covered!</a></p>
+        <br><br>If you're unsure of the distinction between parent and child keys, compressed and uncompressed keys, etc, then <b>Mastering Bitcoin</b> <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04.asciidoc" target="blank">Chapter 4</a> and <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05.asciidoc" target="blank">Chapter 5</a> have got you covered!</a>
+        <br><br>Contact me on <a href="https://twitter.com/mission_bitcoin" target="blank">Twitter (@mission_bitcoin)</a> or <a href="https://github.com/mission-bitcoin/bitcoin-public-key-to-receiving-address-calculator" target="blank">Github</a>.</p>
       </div>
     </div>
   
@@ -33,11 +34,11 @@
     <div>
       <div>
         <br>
-        <font color="orange"><b>Enter public key</b> (format: compressed, 66 hex digits):</font> <br><input style="width: 580px; height: 28px" type="text" id="publicKey" placeholder="Example: 0331683a75a76ad3e21ab188803271107ef9740938421081908cc8642706f78916" title="Public Key Input">
+        <font color="orange"><b>Enter public key</b> (format: compressed, 66 hex digits):</font> <br><input style="width: 540px; height: 28px" type="text" id="publicKey" placeholder="Example: 0331683a75a76ad3e21ab188803271107ef9740938421081908cc8642706f78916" title="Public Key Input">
         <br><br>
         <form>
           <font color="orange"><b>Select address type:</b></font>
-          <br><br>
+          <br>
           <select style="height:30px" id="addressType">
             <option value="segwit">Segwit (P2WPKH, starts with 'bc1q')</option>
             <option value="compatibility">Compatibility (P2SH(P2WPKH), starts with '3')</option>  
@@ -46,8 +47,25 @@
         </form>
         <br>
         <font color="orange"><b>Receiving address:</b></font> <br><input style="width: 340px; height: 28px; background-color: rgb(236, 195, 141)" type="text" id="receivingAddress" title="Receiving Address Output">
-       <br><br><br>
-       <center><button style="width:80px; height:35px" id="button">Submit</button></center>
+       <br><br>
+       <table>
+        <tr>
+          <th colspan="3"><a href="https://mempool.space" id="mempoolSpaceURL"><font color="orange"><b>Mempool.space Stats</b></font></a></th>
+        </tr>
+        <tr>
+          <td>Current balance:</td>
+          <td><span id="btcBalance">N/A</span></td>
+        </tr>
+        <tr>
+          <td>Past received:</td>
+          <td><span id="btcReceived">N/A</span></td>
+        </tr>
+        <tr>
+          <td>Past spent:</td>
+          <td><span id="btcSpent">N/A</span></td>
+        </tr>
+       </table>
+       <br><center><button style="width:80px; height:35px" id="button">Submit</button></center>
        <br>
       </div>
       </div>
