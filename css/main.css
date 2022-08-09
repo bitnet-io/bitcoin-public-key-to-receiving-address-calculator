@@ -1,3 +1,8 @@
+.border {
+  padding: 10px;
+  border: 2px solid rgb(230, 108, 25);
+}
+
 p,
 h1,
 h2,
@@ -25,14 +30,14 @@ a:active {
 table {
   border: 2px solid rgb(230, 108, 25);
   border-collapse: collapse;
-  padding: 5px;
+  padding: 10px;
   color: white;
 }
 th,
 td {
   border: 1px solid rgb(230, 108, 25);
   border-collapse: collapse;
-  padding: 5px;
+  padding: 7px;
 }
 table.center {
   margin-left: auto;
