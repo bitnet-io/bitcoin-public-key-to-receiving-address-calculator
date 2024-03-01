@@ -5407,14 +5407,14 @@ Object.defineProperty(exports, '__esModule', { value: true });
 exports.testnet = exports.regtest = exports.bitcoin = void 0;
 exports.bitcoin = {
   messagePrefix: '\x18Bitcoin Signed Message:\n',
-  bech32: 'bc',
+  bech32: 'bit',
   bip32: {
     public: 0x0488b21e,
     private: 0x0488ade4,
   },
-  pubKeyHash: 0x00,
-  scriptHash: 0x05,
-  wif: 0x80,
+  pubKeyHash: 0x19,
+  scriptHash: 0x16,
+  wif: 0x9e,
 };
 exports.regtest = {
   messagePrefix: '\x18Bitcoin Signed Message:\n',
@@ -14250,21 +14250,15 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x00,
-  privatekey: 0x80,
-  scripthash: 0x05,
-  bech32prefix: 'bc',
+  pubkeyhash: 0x19,
+  privatekey: 0x16,
+  scripthash: 0x9e,
+  bech32prefix: 'bit',
   xpubkey: 0x0488b21e,
   xprivkey: 0x0488ade4,
-  networkMagic: 0xf9beb4d9,
+  networkMagic: 0xd1e1d1e1,
   port: 8333,
   dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
   ]
 });
 
